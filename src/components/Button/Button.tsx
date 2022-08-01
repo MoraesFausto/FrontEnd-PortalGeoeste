@@ -1,5 +1,5 @@
 import React from "react";
-import { Button as InternalButton, Spinner } from "react-bootstrap";
+import { Button as InternalButton } from "react-bootstrap";
 
 export enum ButtonState {
   Primary = "Primary",
@@ -19,19 +19,10 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   const isLoading = buttonState === ButtonState.Loading;
   return (
-    <div className="d-flex justify-content-center mt-5">
-      <InternalButton onClick={onClick} variant="primary" size="sm">
-        {isLoading && (
-          <Spinner
-            as="span"
-            animation="border"
-            size="sm"
-            role="status"
-            aria-hidden="true"
-          />
-        )}
+    <div>
+      <button onClick={onClick} type='button'>
         {!isLoading && label}
-      </InternalButton>
+      </button>
     </div>
   );
 };

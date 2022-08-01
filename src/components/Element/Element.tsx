@@ -19,7 +19,7 @@ export const Element: React.FC<ElementProps> = (props) => {
 
 
     return(
-        <ul>
+        <ul key={props.id}>
         {props.ctgs?.ctg_subs.sort((a, b)=> a.subctg_id - b.subctg_id).map((repo, index) => {
             return (
                 <ElementLi key={repo.subctg_id} transform={repo.transform}>

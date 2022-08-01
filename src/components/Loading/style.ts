@@ -11,6 +11,7 @@ ul {
 ul li {
   margin-bottom: 15px;
   text-align: center;
+  list-style: none;
 }
 
 .center {

@@ -60,7 +60,9 @@ function Download({param:id}){
       </Alert>
       <DownloadBtn>
       <a href={url} download={name} className="hidden" ref={ref} />
+      <div>
       <Button label="Download" buttonState={buttonState} onClick={download} />
+      </div>
       </DownloadBtn>
     </Container>
   );

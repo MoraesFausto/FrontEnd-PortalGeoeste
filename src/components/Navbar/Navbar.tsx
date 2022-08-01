@@ -16,10 +16,10 @@ const NavBar: React.FC<IMenuBurgerProps> = ({ page }) => {
           <Link to="/mapas">Pesquisa</Link>
           <ul className="DropDraw">
             <NavItem>
-                <a href='/categorias/1'> Ambiental</a>
+                <a href='/categorias/3'> Agropecuária</a>
             </NavItem>              
             <NavItem>
-                <a href='/categorias/3'> Agropecuária</a>
+                <a href='/categorias/1'> Ambiental</a>
               </NavItem>
             <NavItem>
                 <a href='/categorias/2'> Municipal </a>

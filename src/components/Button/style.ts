@@ -1,18 +1,6 @@
 import styled from "styled-components";
 
-export const DownloadBtn = styled.form`
-
-a {
-   text-decoration: none;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  background-color: white;
-
-}
+export const DownloadBtn = styled.div`
 
   button[type="button"] {
   border: 0;
@@ -26,9 +14,13 @@ body {
   width: 100px;
   outline: none;
   color: white;
+  z-index: 10000;
+  position: absolute;
   border-radius: 22px;
   transition: 0.25s;
   cursor: pointer;
+  left: 47%;
+  bottom: 5%;
 
 }
 button[type="button"]:hover {

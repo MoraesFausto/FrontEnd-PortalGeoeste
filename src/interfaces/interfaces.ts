@@ -18,6 +18,11 @@ export interface ElementProps {
   id?: string;
 }
 
+export interface GraphicProps {
+  graphic: Map | null;
+  data: any;
+}
+
 export interface Dash{
   map: Map | null;
   DashProps: DashboardProps;

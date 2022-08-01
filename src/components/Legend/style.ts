@@ -20,6 +20,7 @@ padding-left: 16px;
 .btn{
   background: none!important;
   border: none;
+  font-size:.84vw;
   :hover{
     color: rgb(8, 165, 238);
   }

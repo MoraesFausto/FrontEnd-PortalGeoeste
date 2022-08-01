@@ -2,7 +2,6 @@ import { Info } from "./style";
 
 
 function Reference ({info:ref}){
-    console.log(ref.ref_desc);
         return(
             <Info>
                 <div>
