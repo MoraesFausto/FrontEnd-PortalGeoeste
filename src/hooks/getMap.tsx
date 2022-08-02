@@ -15,27 +15,13 @@ function GetMap({ prop:id }) {
   const {data:map} = useFetch<Map>('/Data/mapas/'+id);
   const url = '/Data/mapas/resource/'+id;
 
-  if(map?.map_id === 'USO_OESTE'){
-    return(
-      <Image/>
-    )
-  }
-
-  if(map?.choropleth){
-    const bounds = new LatLngBounds([-25.8, -52.35],[-23.87, -54.82])
-    
+  if(map?.choropleth === 1){
     return(
       <div>
-        <MapContainer style={{ height: "100vh" }} zoom={8}  center={[-24.8, -53.75]} id="mapId" attributionControl={false} zoomControl={false}>
-              <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
-              <ImageOverlay bounds={bounds} url={require(`../assets/${id}.png`)} />
-        </MapContainer>
-        <br/>
-        <br/>
-        <div>
-          <Download param={map?.map_id}/>
-        </div>
-      </div>   
+        <Image info={map?.map_id}/>
+        <Download param={map?.map_id} p={'-1'}/>
+      </div>
+
     )
   }
 

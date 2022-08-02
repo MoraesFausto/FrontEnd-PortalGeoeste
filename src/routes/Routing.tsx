@@ -24,7 +24,6 @@ function Routing(){
                 
                 <Route path='/mapas' element={<Mapas/>}/>
                 <Route path='/mapas/:id' element={<Dashboard/>}/>
-                <Route path='/mapas/uso/:id' element={<Image/>}/>
 
 
                 <Route path='/categorias' element={<Categorias/>}/>

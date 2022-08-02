@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const DownloadBtn = styled.div`
+export type BtnProps = {
+  p: string;
+}
+
+export const DownloadBtn = styled.div<BtnProps>`
 
   button[type="button"] {
   border: 0;
@@ -20,7 +24,7 @@ export const DownloadBtn = styled.div`
   transition: 0.25s;
   cursor: pointer;
   left: 47%;
-  bottom: 5%;
+  bottom: ${props=>props.p}%;
 
 }
 button[type="button"]:hover {

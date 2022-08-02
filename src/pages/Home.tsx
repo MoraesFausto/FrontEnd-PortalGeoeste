@@ -2,7 +2,7 @@ import React from 'react';
 import Client from '../services/Client';
 import { User } from '../interfaces';
 import '../styles/style.css'
-import { Form1 } from '../components/Navbar/style';
+import { Form1 } from '../components/Forms/style';
 import { Auth } from '../hooks/useAuth';
 
 const Home: React.FC = () =>{

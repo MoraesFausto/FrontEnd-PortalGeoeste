@@ -61,3 +61,41 @@ body {
   background: rgb(4, 107, 224);
 }
 `
+export const Form1 = styled.form`
+a {
+  text-decoration: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+  width: 300px;
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  text-align: center;
+
+  button[type="button"] {
+  border: 0;
+  background-color: rgb(8, 165, 238);
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgb(8, 165, 238);
+  padding: 12px 8px;
+  width: 100px;
+  outline: none;
+  color: white;
+  border-radius: 22px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+button[type="button"]:hover {
+  background: rgb(4, 107, 224);
+}
+`

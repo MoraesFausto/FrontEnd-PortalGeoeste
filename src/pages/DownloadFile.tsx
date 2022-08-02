@@ -7,7 +7,7 @@ import { Alert, Container } from "react-bootstrap";
 import { DownloadBtn } from "../components/Button/style";
 import { Navigate } from "react-router-dom";
 
-function Download({param:id}){
+function Download({param:id, p:pos}){
   const path = "/Data/mapas/"+ String(id) + "/download"
   const DownloadFile: React.FC = () => {
   const [buttonState, setButtonState] = useState<ButtonState>(
@@ -58,7 +58,7 @@ function Download({param:id}){
       <Alert variant="danger" show={showAlert}>
         <Navigate to='/'/>
       </Alert>
-      <DownloadBtn>
+      <DownloadBtn p={pos}>
       <a href={url} download={name} className="hidden" ref={ref} />
       <div>
       <Button label="Download" buttonState={buttonState} onClick={download} />
