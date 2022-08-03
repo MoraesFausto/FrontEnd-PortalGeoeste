@@ -26,8 +26,8 @@ function style(feature: any) {
   }
 
   const onEachFeature = (atr: any, layer: any) => {
-    const atr_n = atr.properties.atr + ": " + String(atr.properties.colors);
-    const atr_nome = atr.properties.nome + ": " + String(atr.properties.colors);
+    const atr_n = atr.properties.atr;
+    const atr_nome = atr.properties.nome + ": " + String(atr.properties.atr);
 
     if(atr_n != null){
     layer.on('mouseover', function e() {
@@ -46,10 +46,10 @@ function style(feature: any) {
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <GeoJSON data={JSON.parse(props.data)} style={style} onEachFeature={onEachFeature} />
             <Section id={props.graphic?.map_id}/>
-            <Legend info={props.graphic?.map_legs} />
+            <Legend info={props.graphic?.map_legs} atr={props.graphic?.map_atr} />
             <Reference info={props.graphic?.map_refs}/>
             <ZoomControl position="bottomright"/>
-            <Download param={props.graphic?.map_id} p={'5'}/>
+            <Download param={props.graphic?.map_id} p={'12'}/>
           </MapContainer>
         </div>
     )

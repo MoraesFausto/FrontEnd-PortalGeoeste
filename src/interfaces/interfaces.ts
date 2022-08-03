@@ -1,4 +1,4 @@
-import { Category, Map } from "../types/types";
+import { Category, Legend, Map } from "../types/types";
 
 export interface User{
   id:String,
