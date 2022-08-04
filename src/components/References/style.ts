@@ -5,7 +5,6 @@ export const Info = styled.div`
 div{
     position: absolute;
     right: 15px;
-    margin:auto;
     margin-top: clamp(340px, 25vw, 200px);
     margin-left: 15px;
     background-color: rgba(201, 231, 242, 0.75);
@@ -17,8 +16,12 @@ div{
     border-radius: 5px;
     text-align: center;
     color: rgb(8, 165, 238);
-    font-size:.75vw;
     font-weight: 700;
+
+    h4{
+        font-size:.75vw;
+        margin-top: 20px;
+    }
 }
 
 `
