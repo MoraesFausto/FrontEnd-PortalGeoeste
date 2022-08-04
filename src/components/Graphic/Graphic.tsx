@@ -41,7 +41,6 @@ function style(feature: any) {
 
   export const Graphic: React.FC<GraphicProps> = (props) => {
     return(
-        <div>
             <MapContainer style={{ height: "100vh" }} zoom={8} center={[-24.8, -53.75]} id="mapId" attributionControl={false} zoomControl={false} >
             <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
             <GeoJSON data={JSON.parse(props.data)} style={style} onEachFeature={onEachFeature} />
@@ -51,6 +50,5 @@ function style(feature: any) {
             <ZoomControl position="bottomright"/>
             <Download param={props.graphic?.map_id} p={'12'}/>
           </MapContainer>
-        </div>
     )
   }

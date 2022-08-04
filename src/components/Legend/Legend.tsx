@@ -12,7 +12,6 @@ export function Legend({info:legend, atr: atr_n}){
           <UL>
             <ul>
               {legend?.map(repo =>{
-                console.log(repo.atr, repo.color);
                 return(
                   <Li color={repo.color} key={repo.atr}>
                    <button style={{"border":"none", }} className="btn"> {repo.atr} </button>
