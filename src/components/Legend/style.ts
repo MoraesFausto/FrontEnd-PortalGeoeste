@@ -7,12 +7,12 @@ export type legendColors = {
 export const Li = styled.li<legendColors>`
 
 
-padding-left: 16px; 
+padding-left: 0; 
 
 ::before {
   content: "•"; /* Insert content that looks like bullets */
   font-size:50px;
-  padding-right: 8px;
+  padding-right: 4px;
   vertical-align:middle;
   color: ${props=>props.color}; /* Or a color you prefer */
 }
