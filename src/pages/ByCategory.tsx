@@ -18,7 +18,7 @@ export default function ByCategory() {
       <Ul>
       <div>
         <h2>Dados {subs?.ctg_desc}</h2>
-        {isFetching && <img src={require('../assets/loading.gif')} alt="loading..." className='center'/>}
+        {isFetching && <img src={require('../assets/utils/loading.gif')} alt="loading..." className='center'/>}
         {<Element ctgs={subs}/>}
       </div>
       </Ul>

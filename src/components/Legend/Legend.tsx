@@ -24,8 +24,6 @@ export function Legend({info:legend, atr: atr_n}){
         </Container>
     )
   }else{
-    console.log('false');
-
     return(
       <div></div>
     )

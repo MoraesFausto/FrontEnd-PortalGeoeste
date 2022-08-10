@@ -56,7 +56,7 @@ function Download({param:id, p:pos}){
   return (
     <Container className="mt-5">
       <Alert variant="danger" show={showAlert}>
-        <Navigate to='/'/>
+        <Navigate to='/login'/>
       </Alert>
       <DownloadBtn p={pos}>
       <a href={url} download={name} className="hidden" ref={ref} />

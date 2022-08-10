@@ -24,3 +24,8 @@ export function Auth<User>(url:string, options?:AxiosRequestConfig){
     },[]);
     return { user, err, check }
 }
+
+export const logoutUser = async () =>{
+    await Client.post('/logout');
+    window.location.href='/'
+}

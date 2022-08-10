@@ -8,7 +8,7 @@ export const Mapas = () => {
   return(
     <Ul>
       <ul>
-        {isFetching && <img src={require('../assets/loading.gif')} alt="loading..." className='center'/>}
+        {isFetching && <img src={require('../assets/utils/loading.gif')} alt="loading..." className='center'/>}
         {maps?.map(repo =>{
           if(repo.map_ctg !== 'Uso'){
           return(

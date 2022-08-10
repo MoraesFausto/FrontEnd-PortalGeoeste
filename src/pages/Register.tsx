@@ -1,9 +1,10 @@
 import { RegisterForm } from "../components/Forms/RegisterForm"
 
-const Register: React.FC = () =>{
+export const Register: React.FC = () =>{
     return(
-        <RegisterForm/>
+        <div>
+            <h2> Cadastre-se agora mesmo! </h2>
+            <RegisterForm/>
+        </div>
     )
 }
-
-export default Register

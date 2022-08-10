@@ -1,13 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import { api } from "../services/api";
-import { MapContainer, TileLayer, ImageOverlay } from "react-leaflet";
 import { Loading } from "../components/Loading/Loading";
 import { NotFound } from "../components/NotFound/NotFound";
-import { LatLngBounds } from "leaflet";
 import Download from "../pages/DownloadFile";
 import { useFetch } from "./useFetching";
 import { Map } from "../types";
-import { Image } from "../pages/Uso";
+import { StaticMaps } from "../pages/StaticMaps";
 import { Graphic } from "../components/Graphic/Graphic";
 
 function GetMap({ prop:id }) {
@@ -18,7 +16,7 @@ function GetMap({ prop:id }) {
   if(map?.choropleth === 1){
     return(
       <div>
-        <Image info={map?.map_id}/>
+        <StaticMaps info={map?.map_id}/>
         <Download param={map?.map_id} p={'-1'}/>
       </div>
 

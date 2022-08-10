@@ -1,12 +1,15 @@
 import { Link } from 'react-router-dom';
-import { Nav, NavItem } from './style';
+import { logoutUser } from '../../hooks/useAuth';
+import { Form1 } from '../Forms/style';
+import { LogoutButton, Nav, NavItem } from './style';
 
 interface IMenuBurgerProps {
   page?: 'project' | 'resources' | 'home';
+  status?: boolean;
 
 }
 
-const NavBar: React.FC<IMenuBurgerProps> = ({ page }) => {
+const NavBar: React.FC<IMenuBurgerProps> = ({ page,  status}) => {
 
   return (
     <div>
@@ -32,8 +35,20 @@ const NavBar: React.FC<IMenuBurgerProps> = ({ page }) => {
         <NavItem active={page === 'project'}>
           <Link to="/Saiba_mais">Projeto</Link>
         </NavItem>
+
       </ul>
     </Nav>
+    {status ?(
+          <p></p>
+        )
+        :(
+          <LogoutButton>
+            <button type="button" onClick={logoutUser}>
+              <li> Online </li>
+            </button>
+          </LogoutButton>
+        )
+        }
     </div>
   );
 };

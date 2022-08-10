@@ -1,10 +1,9 @@
-import { Category, Legend, Map } from "../types/types";
+import { Category, Map } from "../types/types";
 
 export interface User{
   id:String,
   email:String
 }
-
 export interface DashboardProps {
   id: string;
   url: string;

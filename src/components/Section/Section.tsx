@@ -14,7 +14,7 @@ export const Section = ({id:url}) =>{
           return(
             <Ul key={sub?.ctg_id}>
               <h2>Estudo {sub?.ctg_desc}</h2>
-              {isFetching && <img src={require('../../assets/loading.gif')} alt="loading..." className='center'/>}
+              {isFetching && <img src={require('../../assets/utils/loading.gif')} alt="loading..." className='center'/>}
                 {<Element ctgs={sub} id={url}/>}
             </Ul>
             )

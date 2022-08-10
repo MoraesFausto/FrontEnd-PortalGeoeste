@@ -98,3 +98,49 @@ export const NavItem = styled.li<IPropsItemMenu>`
       }
     `}
 `;
+
+export const LogoutButton = styled.div`
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+  position: absolute;
+  top: 15%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  background: none;
+  text-align: center;
+
+  button[type="button"] {
+  border: 0;
+  background-color: rgb(8, 165, 238);
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid rgb(8, 165, 238);
+  padding: 12px 8px;
+  width: 100px;
+  outline: none;
+  color: white;
+  border-radius: 22px;
+  transition: 0.25s;
+  cursor: pointer;
+
+}
+button[type="button"]:hover {
+  background: rgb(4, 107, 224);
+}
+button[type="button"]:hover:before {
+  content: "Sair" !important;
+}
+button[type="button"]:hover li{
+  display: none;
+}
+
+`;

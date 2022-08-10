@@ -37,3 +37,15 @@ export type Category = {
   ctg_desc: string;
   ctg_subs: SubCategory[];
 }
+
+export type Member = {
+  id:number,
+  name:string,
+  lattes:string,
+}
+
+export type Team = {
+  id:number,
+  description:String,
+  members:Member[],
+}

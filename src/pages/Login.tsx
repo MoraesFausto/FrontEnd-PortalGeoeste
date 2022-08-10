@@ -2,7 +2,10 @@ import { LoginForm } from '../components/Forms/LoginForm';
 
 const Login: React.FC = () =>{
     return(
-        <LoginForm/>
+        <div>
+            <h2> Voce ainda não entrou com sua conta! </h2>
+            <LoginForm/>
+        </div>
     )
 }
 

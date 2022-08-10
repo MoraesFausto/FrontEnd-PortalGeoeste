@@ -3,33 +3,29 @@ import Client from '../services/Client';
 import { User } from '../interfaces';
 import '../styles/style.css'
 import { Form1 } from '../components/Forms/style';
-import { Auth } from '../hooks/useAuth';
+import { Auth, logoutUser } from '../hooks/useAuth';
 
 const Home: React.FC = () =>{
 
     const { user, err, check } = Auth<User | null>('/perfil');
 
-    const logoutUser = async () =>{
-        await Client.post('/logout');
-        window.location.href='/'
-    }
-
+  
     return (
         <div id="Home">
             
            
             { !err && check?(
                 <div>
-                    <h2>Bem vindo { user?.email }!</h2>
-
-                    <Form1>
-                        <button type="button" onClick={logoutUser}>Sair</button>
-                    </Form1>
-
+                    <br/>
+                    <br/>
+                    <h2>Bem vindo { user?.email } ao Portal Geoeste!</h2>
+                    <h3>Portal de Dados Ambientais e Agropecuários da Mesorregião Oeste do Paraná</h3>
                 </div>
             ): err && !check ?(
                 <div>
-                <h2>Voce ainda não entrou com sua conta!</h2>
+                <h2>Projeto Geoeste</h2>
+            <h3>Portal de Dados Ambientais e Agropecuários da Mesorregião Oeste do Paraná</h3>
+
             <div>
                 <Form1 className='box' method="post">
                 <a href="/login" >
