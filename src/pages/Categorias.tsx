@@ -6,7 +6,7 @@ import {Element} from '../components/Element/Element';
 import { Ul } from '../components/Loading/style';
 
 export default function Categorias() {
-  const url = '/Data/mapas/categorias';
+  const url = '/api/Data/mapas/categorias';
   const { data: subs, isFetching, err } = useFetch<Category[]>(url);
 
 

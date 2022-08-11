@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Client from '../../services/Client';
+import  api  from '../../services/api';
 import { Form } from './style';
 
 export const LoginForm: React.FC = () =>{
@@ -8,7 +8,7 @@ export const LoginForm: React.FC = () =>{
 
     const loginUser = async () =>{
         try{
-            await Client.post('/login', {email, password});
+            await api.post('/api/login', {email, password});
             window.location.href='/'
         }catch(err: any){
             if(err.response.status === 401){

@@ -13,9 +13,9 @@ div{
     h3{
       text-align: center;
     }
+    padding-right: 1vw;
     position: absolute;
    ${props=>props.side}: 0;
-    margin:auto;
     margin-top: 1%;
     margin-${props=>props.side}: 15px;
     background-color: rgba(201, 231, 242, 0.75);
@@ -23,7 +23,6 @@ div{
     height: ${props=>props.h};
     z-index: 10000;
     overflow-y:scroll;
-    text-align:justify;
     border: 1px solid rgb(8, 165, 238);
     border-radius: 5px;
     text-align: ${props=>props.align};

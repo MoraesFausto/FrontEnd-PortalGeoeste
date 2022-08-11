@@ -3,7 +3,7 @@ import { Map } from '../types/types';
 import { Ul } from '../components/Loading/style'
 
 export const Mapas = () => {
-  const {data: maps, isFetching} = useFetch<Map[]>('/Data/mapas')
+  const {data: maps, isFetching} = useFetch<Map[]>('api/Data/mapas')
 
   return(
     <Ul>

@@ -1,13 +1,12 @@
 import React from 'react';
-import Client from '../services/Client';
 import { User } from '../interfaces';
 import '../styles/style.css'
 import { Form1 } from '../components/Forms/style';
-import { Auth, logoutUser } from '../hooks/useAuth';
+import { Auth } from '../hooks/useAuth';
 
 const Home: React.FC = () =>{
 
-    const { user, err, check } = Auth<User | null>('/perfil');
+    const { user, err, check } = Auth<User | null>('api/perfil');
 
   
     return (

@@ -8,7 +8,7 @@ import { Ul } from '../components/Loading/style';
 
 export default function ByCategory() {
   const { id } = useParams();
-  const url = '/Data/mapas/categorias/' + String(id);
+  const url = '/api/Data/mapas/categorias/' + String(id);
   const { data: subs, isFetching, err } = useFetch<Category>(url);
 
 

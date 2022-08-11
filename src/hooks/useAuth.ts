@@ -1,6 +1,6 @@
 import { AxiosRequestConfig } from "axios";
 import { useEffect, useState } from "react";
-import Client from "../services/Client";
+import  api  from "../services/api";
 
 export function Auth<User>(url:string, options?:AxiosRequestConfig){
     const [user, setUser] = useState<User | null>(null);
@@ -10,13 +10,12 @@ export function Auth<User>(url:string, options?:AxiosRequestConfig){
     useEffect(()=>{
         (async () =>{
             try{
-                const res = await Client.get('/perfil');
+                const res = await api.get('/api/perfil');
                 if(res.data)
                     setUser(res.data);
                 setErr(false);
 
             }catch(err){
-                console.log('Not authenticated');
                 setCheck(false);
             }
 
@@ -26,6 +25,6 @@ export function Auth<User>(url:string, options?:AxiosRequestConfig){
 }
 
 export const logoutUser = async () =>{
-    await Client.post('/logout');
+    await api.post('/api/logout');
     window.location.href='/'
 }

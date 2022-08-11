@@ -6,10 +6,10 @@ import {Element} from "../Element/Element";
 
 
 export const Section = ({id:url}) =>{
-  const {data: subs, isFetching} = useFetch<Category[]>('/Data/mapas/categorias');
+  const {data: subs, isFetching} = useFetch<Category[]>('/api/Data/mapas/categorias');
     return(
     <Container side={'left'} w={'30%'} h={'35%'} align={'center'}>
-      <div>
+      <div style={{"textAlign":"center"}}>
         {subs?.map((sub)=>{
           return(
             <Ul key={sub?.ctg_id}>

@@ -3,7 +3,7 @@ import { Team } from "../../types";
 import { Ul } from "./style";
 
 export const Teams = () => {
-    const url = '/Data/teams';
+    const url = 'api/Data/teams';
     const { data: teams, err } = useFetch<Team[]>(url);
 
     if (!err) {

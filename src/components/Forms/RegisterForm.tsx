@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Client from '../../services/Client'
+import  api  from '../../services/api'
 import { Form } from './style';
 
 
@@ -13,7 +13,7 @@ export const RegisterForm: React.FC = () =>{
         if(password !== confpassword)
             return alert('Senhas diferentes!');
         try{
-            await Client.post('/register', {email, password});
+            await api.post('/api/register', {email, password});
             window.location.href='/'
         }catch(err: any){
             console.log(err.response)

@@ -14,7 +14,7 @@ import { NotFound } from '../components/NotFound/NotFound';
 import { Project } from '../pages/Project';
 
 function Routing(){
-    const { err, check } = Auth('/perfil');
+    const { err, check } = Auth('/api/perfil');
 
     return(
         <Router>

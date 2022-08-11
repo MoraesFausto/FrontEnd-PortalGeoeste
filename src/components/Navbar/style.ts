@@ -111,7 +111,7 @@ body {
 }
   position: absolute;
   top: 15%;
-  left: 95%;
+  left: 90%;
   transform: translate(-50%, -50%);
   background: none;
   text-align: center;
