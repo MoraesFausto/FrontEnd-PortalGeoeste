@@ -1,4 +1,7 @@
 import styled, { css } from 'styled-components';
+import compass_with_p_white from '../../assets/compass_with_p_white.png';
+import compass_with_p_blue from '../../assets/compass_with_p_blue.png';
+
 
 
 import {
@@ -8,6 +11,7 @@ import {
 
 interface IPropsItemMenu {
   active?: boolean;
+  opt?: string;
 }
 
 export const Nav = styled.nav`
@@ -40,6 +44,7 @@ export const Nav = styled.nav`
 
 export const NavItem = styled.li<IPropsItemMenu>`
   padding: 10px;
+  margin-top: 15px;
   border-radius: 30px;
   transition: 0.3s all;
   a {
@@ -48,7 +53,7 @@ export const NavItem = styled.li<IPropsItemMenu>`
 
   }
   &:hover {
-    background-color: ${tertiaryColor};
+    background-color: ${(props) => props.opt};
     color: #fff;
     > a {
       color: rgb(8,165,238);

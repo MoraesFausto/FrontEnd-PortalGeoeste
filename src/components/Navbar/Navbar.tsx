@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { logoutUser } from '../../hooks/useAuth';
-import { LogoutButton, Nav, NavItem } from './style';
+import {  LogoutButton, Nav, NavItem } from './style';
 
 interface IMenuBurgerProps {
   page?: 'project' | 'resources' | 'home';
@@ -14,7 +14,7 @@ const NavBar: React.FC<IMenuBurgerProps> = ({ page,  status}) => {
     <div>
     <Nav>
       <ul>
-        <NavItem active={page === 'resources'}>
+        <NavItem style={{"marginTop":"3vw"}} active={page === 'resources'} opt={'white'}>
           <Link to="/mapas">Pesquisa</Link>
           <ul className="DropDraw">
             <NavItem>
@@ -28,12 +28,19 @@ const NavBar: React.FC<IMenuBurgerProps> = ({ page,  status}) => {
             </NavItem>
           </ul>
         </NavItem>
-        <NavItem active={page === 'home'}>
-          <Link to="/">Portal Geoeste</Link>
+        <NavItem active={page === 'home'} opt={'none'}>
+          <a href='/'>
+              <img style={{"width":"4.4vw", "height":'4.4vw', "marginTop":"-.75vw", "marginLeft":".5vw"}}
+                src={require('../../assets/compass_with_p_white.png')}
+                onMouseOver={(e)=>{e.currentTarget.src = require('../../assets/compass_with_p_blue.png')}}
+                onMouseOut={(e)=>{e.currentTarget.src = require('../../assets/compass_with_p_white.png')}} 
+                alt='logo' />
+          </a>
         </NavItem>
-        <NavItem active={page === 'project'}>
+        <NavItem active={page === 'project'} style={{"marginTop":"3vw"}} opt={'white'}>
           <Link to="/Saiba_mais">Projeto</Link>
         </NavItem>
+
 
       </ul>
     </Nav>
