@@ -45,9 +45,8 @@ function style(feature: any) {
             <MapContainer style={{ height: "100vh", }} zoom={8} center={[-24.8, -53.75]} id="mapId" attributionControl={false} zoomControl={false} >
             <TileLayer url="https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png" />
             <GeoJSON data={JSON.parse(props.data)} style={style} onEachFeature={onEachFeature} />
-            <Section id={props.graphic?.map_id}/>
-            <Legend info={props.graphic?.map_legs} atr={props.graphic?.map_value} />
-            <Reference info={props.graphic?.map_refs}/>
+            <Section id={props.graphic?.map_id} isOverGraphic={true}/>
+            <Legend info={props.graphic?.map_legs} atr={props.graphic?.map_value} reference={props.graphic?.map_refs} />
             <ZoomControl position="bottomright"/>
             <Download {...props.downloadProps}/>
           </MapContainer>

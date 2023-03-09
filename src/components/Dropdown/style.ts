@@ -6,6 +6,8 @@ export const Li = styled.li`
 
 margin-bottom:5px;
 font-size:.8em;
+text-align: center;
+padding-bottom:15px;
 a:hover {
         color:rgb(4, 107, 224);
         text-decoration: none;

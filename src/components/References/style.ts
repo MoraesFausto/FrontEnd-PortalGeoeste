@@ -4,17 +4,12 @@ export const Info = styled.div`
 
 div{
     position: absolute;
-    right: 15px;
-    margin-top: 25%;
-    margin-left: 15px;
+
     background-color: rgba(201, 231, 242, 0.75);
-    width: 26vw;
-    max-height: 30%;
-    z-index: 10000;
-    text-align:justify;
-    border: 1px solid rgb(8, 165, 238);
+    width: 250px;
     border-radius: 5px;
     text-align: center;
+    margin-left: -20px;
     color: rgb(8, 165, 238);
     font-weight: 700;
 

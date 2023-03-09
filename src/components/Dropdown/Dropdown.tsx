@@ -10,7 +10,8 @@ export const DropDown: React.FC<DropDownProps> = (props) => {
                         return(
                             <Li key={map.map_id}>
                             <a href={"/mapas/" + map.map_id}> 
-                                <button style={{"fontWeight":"900", "outlineStyle":"none"}} className="btn" autoFocus>
+                                        
+                                <button style={{"fontWeight":"900", "outlineStyle":"none","margin":"-15px" }} className="btn" autoFocus>
                                     {map.map_desc}
                                 </button>
                             </a>
@@ -20,7 +21,9 @@ export const DropDown: React.FC<DropDownProps> = (props) => {
                         return(
                             <Li key={map.map_id}>
                                 <a href={'/mapas/' + map.map_id}>
-                                    <button className="btn">
+                                    <button className="btn" style={{
+                                        "margin":"-15px"
+                                    }}>
                                         {map.map_desc}
                                     </button>
                                 </a>

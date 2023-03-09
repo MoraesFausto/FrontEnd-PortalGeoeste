@@ -15,18 +15,18 @@ const NavBar: React.FC<IMenuBurgerProps> = ({ page,  status}) => {
     <Nav>
       <ul>
         <NavItem style={{"marginTop":"3vw"}} active={page === 'resources'} opt={'white'}>
-          <Link to="/mapas">Pesquisa</Link>
-          <ul className="DropDraw">
-            <NavItem opt={'white'}>
-                <a href='/categorias/3'> Agropecuária</a>
-            </NavItem>              
-            <NavItem opt={'white'}>
-                <a href='/categorias/1'> Ambiental</a>
-              </NavItem>
-            <NavItem opt={'white'}>
-                <a href='/categorias/2'> Municipal </a>
-            </NavItem>
-          </ul>
+          <Link to ="/categorias/3"
+            onClick={()=> window.location.href = '/categorias/3'}
+          > 
+            MAPAS E DADOS AGROPECUÁRIOS
+          </Link>
+        </NavItem>
+        <NavItem style={{"marginTop":"3vw"}} active={page === 'resources'} opt={'white'}>
+          <Link to ="/categorias/1"
+            onClick={()=> window.location.href = '/categorias/1'}
+          > 
+            MAPAS E DADOS AMBIENTAIS
+          </Link>
         </NavItem>
         <NavItem active={page === 'home'} opt={'none'}>
           <a href='/'>
@@ -38,16 +38,12 @@ const NavBar: React.FC<IMenuBurgerProps> = ({ page,  status}) => {
           </a>
         </NavItem>
         <NavItem style={{"marginTop":"3vw"}} active={page === 'project'} opt={'white'}>
-          <Link to="/mapas">Pesquisa</Link>
-          <ul className="DropDraw">
-            <NavItem opt={'white'}>
-                <a href='/publicacoes'> Publicações</a>
-            </NavItem>              
-            <NavItem opt={'white'}>
-                <a href='/Saiba_mais'> Saiba Mais</a>
-              </NavItem>
-          </ul>
+          <Link to="/mapas">CONHEÇA O PROJETO</Link>
         </NavItem>
+        <NavItem style={{"marginTop":"3.7vw"}} active={page === 'resources'} opt={'white'}>
+          <Link to="/publicacoes">PUBLICAÇÕES</Link>
+        </NavItem>
+
 
 
       </ul>

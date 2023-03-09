@@ -26,7 +26,7 @@ export const Nav = styled.nav`
     content: '';
     border-radius: 0;
   }
-  font-size: 18px;
+  font-size: 14px;
   ul {
     max-width: 1200px;
     padding: 0;
@@ -44,6 +44,7 @@ export const NavItem = styled.li<IPropsItemMenu>`
   margin-top: 15px;
   border-radius: 30px;
   transition: 0.3s all;
+  width: 130px;
   a {
     color: white;
     text-decoration: none;

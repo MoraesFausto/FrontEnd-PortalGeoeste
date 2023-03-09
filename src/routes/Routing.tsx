@@ -50,7 +50,7 @@ function Routing(){
 
 
                 <Route path='/categorias' element={<Categorias/>}/>
-                <Route path='/categorias/:id' element={<ByCategory/>}/>
+                <Route path='/categorias/:id' element={<ByCategory/>} />
 
                 <Route path='/Saiba_mais' element={<Project/>}/>
 

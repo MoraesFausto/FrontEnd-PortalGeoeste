@@ -20,7 +20,10 @@ export const Element: React.FC<ElementProps> = (props) => {
 
 
     return(
-        <ul key={props.id}>
+        <ul key={props.id} style={{
+            "marginLeft":"-30px"
+
+        }}>
         {props.ctgs?.ctg_subs.sort((a, b)=> a.subctg_id - b.subctg_id).map((repo, index) => {
             repo?.subctg_maps.map((map) => {
                 if(map.map_id === props.id && !selected){

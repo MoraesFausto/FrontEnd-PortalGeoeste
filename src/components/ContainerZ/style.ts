@@ -35,6 +35,7 @@ export const Container = styled.div<containerProps>`
   /* width */
   ::-webkit-scrollbar {
     width: 8px;
+    max-height: 5px;
   }
 
   /* Track */
@@ -42,11 +43,13 @@ export const Container = styled.div<containerProps>`
     box-shadow: inset 0 0 5px gray;
     border-radius: 50px;
 
+
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background-color: rgba(8, 165, 238, 0.5);
+    
 ;
     border-radius: 10px;
   }
@@ -62,8 +65,7 @@ export const Container = styled.div<containerProps>`
 export const UL = styled.ul`
 ul {
   list-style: none; /* Remove HTML bullets */
-  padding: 0;
-  margin: 0;
+  padding: 50px 0px 10px 0px;
   font-size:.83vw;
 
 }

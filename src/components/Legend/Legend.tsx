@@ -1,12 +1,13 @@
 
 import { Container, UL } from "../ContainerZ"
+import { Info } from "../References/style"
 import { Li } from './style'
 
-export function Legend({info:legend, atr: atr_n}){
+export function Legend({info:legend, atr: atr_n, reference: ref}){
 
   if(atr_n != null){
     return (
-      <Container side={'right'} w={'25vw'} h={'19vw'}> 
+      <Container side={'right'} w={'270px'} h={'650px'}> 
           
           <h3 >{atr_n}</h3>
           <UL>
@@ -19,6 +20,15 @@ export function Legend({info:legend, atr: atr_n}){
                 )
               })}
             </ul>
+            <Info>
+              <div>
+                    <h5> PROJETO GEOESTE - UTFPR </h5>
+                    <h5> SRC: {ref?.src}</h5>
+                    <h5> FONTES: {ref?.fontes} </h5>
+                    <h5> ELABORAÇÃO: {ref?.elaboracao} </h5>
+              </div>
+
+            </Info>
             </UL>
         </Container>
     )
